@@ -1,0 +1,30 @@
+== Django Holding Page ==
+
+An out-the-box viral holding page for your websites with export functionality.
+
+Was developed for another of my project, http://www.rpg-engine.com
+
+Feel free to download, modify or adapt this for your own needs. Contact me at http://www.danieldavies.co.uk if you'd like me to quote you for a hosted or custom viral holding page.
+
+= Features=
+
+- Users can provide their email address and name which is saved in to the database for future exports to systems such as Campaign Monitor.
+- Each user is sent a viral code, which allows them to share your holding page with other people and build up points.
+
+= Usage =
+
+- git clone git://github.com/danux/Django-Holding-Page.git
+- cd django-holding-page
+- pip install -r requirements.txt
+- cd holdingpage
+- ./manage.py syncdb
+- ./manage.py runserver
+- Restyle subscriber/templates/subscriber/*.html
+- Reword subscriber/templates/email/welcome.txt to suit your project
+
+= Development Roadmap/Ideas =
+
+- Auto-export to Campaign Monitor, Sales Force, etc
+- "Reserve my username" feature
+- Make it easy to integrate this as a beta holding pen for Django projects (i.e. issue beta invites to your subscribers)
+- Any thing else you fancy adding/suggesting - Fork away!
