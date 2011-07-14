@@ -22,7 +22,7 @@ cd holdingpage
 ./manage.py syncdb
 ./manage.py runserver
 Restyle subscriber/templates/subscriber/*.html
-Reword subscriber/templates/email/welcome.txt to suit your project
+Reword subscriber/templates/email/welcome_*.txt to suit your project
 
 = Development Roadmap/Ideas =
 
