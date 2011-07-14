@@ -21,6 +21,13 @@ class Subscriber(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
     
+    def __unicode__(self):
+        return '%s <%s>' % (self.full_name, self.email)
+    
+    class Meta():
+        permissions = (
+            ("export_csv", "Can export CSV data"),)
+    
     @staticmethod
     def share_code_generator(sender, **kwargs):
         """
@@ -50,10 +57,12 @@ class Subscriber(models.Model):
         if kwargs['created'] is False:
             return
         site = Site.objects.get(id=settings.SITE_ID)
-        rendered = render_to_string('email/welcome.txt', {'subscriber':  instance,
-                                                          'site' : site })
-        send_mail('Thanks for subscribing',
-                  rendered,
+        subject = render_to_string('email/welcome_subject.txt', {'subscriber':  instance,
+                                                                 'site' : site })
+        body = render_to_string('email/welcome_body.txt', {'subscriber':  instance,
+                                                           'site' : site })
+        send_mail(subject,
+                  body,
                   settings.DEFAULT_FROM_EMAIL,
                   [instance.email])
         

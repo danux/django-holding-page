@@ -1,0 +1,2 @@
+{% for subscriber in subscribers %}"{{ subscriber.full_name }}","{{ subscriber.email }}"
+{% endfor %}
