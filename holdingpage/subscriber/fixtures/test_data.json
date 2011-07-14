@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 1,
+        "model": "subscriber.subscriber",
+        "fields": {
+            "full_name": "Test Data User",
+            "email": "testdata@example.com",
+            "share_code": "1234567890"
+        }
+    }
+]
