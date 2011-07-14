@@ -1,0 +1,4 @@
+Welcome to {{ site.name }}!
+
+Your unique share code:
+http://{{ site.domain }}/{{ subscriber.share_code }}
