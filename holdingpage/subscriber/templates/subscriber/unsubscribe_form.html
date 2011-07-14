@@ -1,14 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<form method="post" action="{% url subscriber:unsubscribe_form %}">
-{% csrf_token %}
-{{ form }}
-<input type="submit" value="Unsubscribe" />
-</form>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<section id="unsubscribe">
+    <header>
+        <h3>Take me off the list!</h3>
+    </header>
+    <div class="header-shadow"></div>
+    <article id="unsubscription-form">
+        <form method="post" action="." id="form">
+            {% if  form.email.errors %}<p class="error">&darr; {% for error in form.email.errors %}{{ error }} &darr;{% endfor %}</p>{% endif %}
+            <label for="id_email">Your Email Address*:</label>
+            <input type="email" name="email" id="id_email" value="{{ form.email.value|default:"" }}" required />
+            <command>
+                <input type="submit" id="id_submit" value="Unsubscribe!"/>
+            </command>
+            {% csrf_token %}
+        </form>
+    </article>
+</section>
+{% endblock %}

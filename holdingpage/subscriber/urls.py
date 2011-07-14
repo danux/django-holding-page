@@ -11,5 +11,5 @@ urlpatterns += patterns("holdingpage.subscriber.admin_views",
 urlpatterns += patterns("holdingpage.subscriber.views",
                         url(r'^unsubscribe/(?P<email>.+)/$','unsubscribe_form', name="unsubscribe_form_with_email"),
                         url(r'^unsubscribe/$','unsubscribe_form', name="unsubscribe_form"),
-                        url(r'^(?P<code>[0-9A-Z]{10})$','subscriber_form', name="subscriber_form_with_code"),
+                        url(r'^(?P<code>[0-9A-Z]{10})/$','subscriber_form', name="subscriber_form_with_code"),
                         url(r'^$','subscriber_form', name="subscriber_form"),)

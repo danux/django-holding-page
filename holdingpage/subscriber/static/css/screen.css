@@ -1,0 +1,258 @@
+@CHARSET "UTF-8";
+* { padding: 0; margin: 0; border: 0; }
+a { color: #0a0a0a; text-decoration: underline; }
+a:hover { text-decoration: underline; }
+
+body {
+    font-family: Georgia;
+    color: #0a0a0a;
+    font-size: 12px;
+}
+
+#page-header { 
+    width: 100%;
+    border-top: 20px solid #2d2c2a;
+    margin-bottom: 50px;
+}
+
+#page-header hgroup {
+    padding: 50px 0;
+    text-align: center;	
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: normal;	
+}
+
+h2 {
+	padding-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #1b3e71;
+    font-style: italic;	
+}
+
+#overview {
+    width: 900px;
+    background-color: #ced7e0;
+    margin: auto;
+    padding: 10px 0;
+}
+
+#overview header {
+    display: block;
+    background-color: #a9b3bd;
+    width: 100px;
+    margin-left: 20px;
+    height: 25px;
+}
+
+#overview header h3 {
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 25px;    	
+}
+
+#overview-mid-layer {
+    width: 880px;
+    background-color: #a9b3bd;
+    padding: 10px 0;	
+    margin: auto;
+}
+
+#overview-inner-layer {
+	width: 858px;
+	border: 1px solid #9ea6ae;
+	margin: auto;
+	background-color: #eeeff1;
+	padding: 0 0 10px 0;
+}
+
+#overview-inner-layer p {
+	padding: 10px 10px 0 10px;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+#content {
+    width: 900px;
+    margin: auto;
+}
+
+#column-1 {
+    width: 449px;
+    border-right: 1px solid #cbd1d7;
+    float: left;	
+    margin-bottom: 50px;
+}
+
+#column-2 {
+    width: 400px;
+    float: left;	
+    margin-left: 50px;
+}
+
+#content h3 {
+	font-size: 22px;
+	border-bottom: 1px solid #cbd1d7;
+	width: 400px;
+	font-weight: normal;
+	padding: 5px 0;
+	clear: both;
+}
+
+.header-shadow {
+    width: 400px;
+    height: 4px;
+    background-color: #eeeff1;
+    margin-bottom: 20px;	
+}
+
+h4 {
+	font-style: italic;
+	color: #1b3e71;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#content p {
+	padding: 10px 0;
+	line-height: 20px;
+}
+
+#portfolio article {
+    margin-top: 20px;
+    width: 400px;
+}
+
+#portfolio footer {
+    border-bottom: 1px solid #cbd1d7;
+    padding-bottom: 20px;
+    font-style: italic;
+}
+
+#social-media article {
+    width: 200px;
+    float: left;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.sprite {
+	position: absolute;
+    background-image: url('../images/sprites.png');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;   	
+}
+
+#blog .sprite {
+    background-position: 0 0;   
+}
+
+#tumblr .sprite {
+    background-position: 0 -32px;   
+}
+
+#facebook .sprite {
+    background-position: 0 -64px;   
+}
+
+#linkedin .sprite {
+    background-position: 0 -192px;   
+}
+
+#twitter .sprite {
+    background-position: 0 -160px;   
+}
+
+#flickr .sprite {
+    background-position: 0 -128px;   
+}
+
+#delicious .sprite {
+    background-position: 0 -96px;   
+}
+
+#social-media article header, #social-media article a {
+    padding-left: 40px;	
+}
+
+#contact h4 {
+    padding-bottom: 10px;
+}
+
+#digits {
+	padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cbd1d7;	
+}
+
+#digits li {
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+#digits li span {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    text-align: right;
+    width: 60px;	
+}
+
+form label {
+	padding-top: 5px;
+    display: block;
+}
+
+form input, form textarea {
+    border: 1px solid #cbd1d7;
+    font-size: 12px;
+    font-family: Georgia;
+    margin: 5px 0;
+    padding: 3px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+form label[for='id_subject'], form #id_subject {
+    display: none;	
+}
+
+form input[type='submit'] {
+    width: 100px;
+    color: #fff;
+    clear: both;
+    display: block;
+    background-color: #0A0A0A;	
+}
+
+#page-footer {
+	background-color: #EEEFF1;
+    clear: both;
+    width: 900px;
+    margin: auto;
+    border-top: 10px solid #A9B3BD;
+}
+
+#page-footer p {
+    padding: 10px;	
+}
+
+#success-message {
+    display:none;	
+}
+
+#content .error {
+    padding: 2px 10px;
+    background-color: #FFE0E0;
+    margin-right: 50px;
+    margin-top: 10px;
+}

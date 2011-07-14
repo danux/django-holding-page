@@ -1,14 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<form method="post" action="{% url subscriber:subscriber_form %}">
-{% csrf_token %}
-{{ form }}
-<input type="submit" value="Keep me posted" />
-</form>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<section id="subscribe">
+    <header>
+        <h3>Let me know when you launch!</h3>
+    </header>
+    <div class="header-shadow"></div>
+    <article id="subscription-form">
+        <form method="post" action="." id="form">
+            {% if  form.full_name.errors %}<p class="error">&darr; {% for error in form.full_name.errors %}{{ error }} &darr;{% endfor %}</p>{% endif %}
+            <label for="id_full_name">Your Name*:</label>
+            <input type="text" name="full_name" id="id_full_name" value="{{ form.full_name.value|default:"" }}" required />
+            {% if  form.email.errors %}<p class="error">&darr; {% for error in form.email.errors %}{{ error }} &darr;{% endfor %}</p>{% endif %}
+            <label for="id_email">Your Email Address*:</label>
+            <input type="email" name="email" id="id_email" value="{{ form.email.value|default:"" }}" required />
+            <command>
+                <input type="submit" id="id_submit" value="Subscribe!"/>
+            </command>
+            {% csrf_token %}
+        </form>
+    </article>
+</section>
+{% endblock %}
