@@ -12,7 +12,7 @@ body {
 #page-header { 
     width: 100%;
     border-top: 20px solid #2d2c2a;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 #page-header hgroup {
@@ -126,86 +126,7 @@ h4 {
 	line-height: 20px;
 }
 
-#portfolio article {
-    margin-top: 20px;
-    width: 400px;
-}
 
-#portfolio footer {
-    border-bottom: 1px solid #cbd1d7;
-    padding-bottom: 20px;
-    font-style: italic;
-}
-
-#social-media article {
-    width: 200px;
-    float: left;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.sprite {
-	position: absolute;
-    background-image: url('../images/sprites.png');
-    background-repeat: no-repeat;
-    width: 32px;
-    height: 32px;   	
-}
-
-#blog .sprite {
-    background-position: 0 0;   
-}
-
-#tumblr .sprite {
-    background-position: 0 -32px;   
-}
-
-#facebook .sprite {
-    background-position: 0 -64px;   
-}
-
-#linkedin .sprite {
-    background-position: 0 -192px;   
-}
-
-#twitter .sprite {
-    background-position: 0 -160px;   
-}
-
-#flickr .sprite {
-    background-position: 0 -128px;   
-}
-
-#delicious .sprite {
-    background-position: 0 -96px;   
-}
-
-#social-media article header, #social-media article a {
-    padding-left: 40px;	
-}
-
-#contact h4 {
-    padding-bottom: 10px;
-}
-
-#digits {
-	padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #cbd1d7;	
-}
-
-#digits li {
-    list-style-type: none;
-    padding: 5px 0;
-}
-
-#digits li span {
-    display: block;
-    float: left;
-    margin-right: 5px;
-    text-align: right;
-    width: 60px;	
-}
 
 form label {
 	padding-top: 5px;
