@@ -27,6 +27,10 @@ class Subscriber(models.Model):
     class Meta():
         permissions = (
             ("export_csv", "Can export CSV data"),)
+
+    @property
+    def subscribers_recruited(self):
+        return Subscriber.objects.filter(source_share_code=self.share_code).count()
     
     @staticmethod
     def share_code_generator(sender, **kwargs):
