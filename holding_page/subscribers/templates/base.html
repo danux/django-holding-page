@@ -1,53 +1,53 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB" lang="en-GB">
+{% load static %}<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="Author" content="Daniel Davies" />
-    <meta name="viewport" content="width=1024" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Django Holding Page</title>
-    <link rel="home" href="" />
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" media="screen" />
+    <meta name="Author" content="Daniel Davies" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
-    <header id="page-header">
-        <hgroup>
-            <h1>Django Holding Page</h1>
-            <h2>A demonstration holding page.</h2>
-        </hgroup>
-    </header>
-    <div id="content">
-        <div id="column-1">
-            {% block content %}
-            {% endblock content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Django Holding Page</h1>
+                <p class="lead">Launch a quick viral holding page to notify people when you launch.</p>
+            </div>
         </div>
-        <div id="column-2">
-            <section>
-                <header>
-                    <h3>Where am I?</h3>
-                </header>
-                <div class="header-shadow"></div>
-                <article id="about">
-                    <p>
-                        Django holding page collects names and email addresses that can be exported
-                        as a CSV, ready for import in to Campaign Monitor. This page is for demonstration
-                        purposes only!
-                    </p>
-                    <p>
-                        If you've checked out this project then well done - it's running! Now customise
-                        the templates and you're ready to go!
-                    </p>
-                </article>
-            </section>
+        <div class="row">
+            <div class="col-md-6">
+                {% block content %}
+                {% endblock content %}
+            </div>
+            <div class="col-md-6">
+                <h2>Where am I?</h2>
+                <p>
+                    Django Holding Page collects names and email addresses that can be exported
+                    as a CSV, ready for import in to Campaign Monitor. This page is for demonstration
+                    purposes only!
+                </p>
+                <p>
+                    If you've checked out this project then well done - it's running! Now customise
+                    the templates and you're ready to go!
+                </p>
+                <p>
+                    Learn more on <a href="https://github.com/danux/django-holding-page/" title="Django Holding Page's GitHub">GitHub</a>.
+                </p>
+            </div>
         </div>
     </div>
-    <footer id="page-footer">
-        <p>
-            Made with <a href="https://github.com/danux/Django-Holding-Page">Django Holding Page</a>, by <a href="http://www.danieldavies.co.uk">Daniel Davies</a>. Find out more on <a href="https://github.com/danux/Django-Holding-Page">Github</a>.
-        </p>
-    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

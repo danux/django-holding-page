@@ -32,7 +32,7 @@ class UnsubscribeForm(forms.Form):
     """
     Form used to unsubscribe and subscriber.
     """
-    email = forms.CharField()
+    email = forms.CharField(label='Email address')
 
     def clean_email(self):
         if not Subscriber.objects.filter(email=self.cleaned_data['email']).exists():
