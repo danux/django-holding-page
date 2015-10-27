@@ -60,7 +60,7 @@ class SubscriptionFormTestCase(TestCase):
         self.assertFormError(response,
                              "form",
                              'email',
-                             u'Subscriber with this Email already exists.')
+                             'Subscriber with this Email address already exists.')
 
     def test_form_valid_email(self):
         """
@@ -82,11 +82,11 @@ class SubscriptionFormTestCase(TestCase):
         self.assertFormError(response,
                              "form",
                              'email',
-                             u'This field is required.')
+                             'This field is required.')
         self.assertFormError(response,
                              "form",
                              'full_name',
-                             u'This field is required.')
+                             'This field is required.')
 
     def test_send_email(self):
         """
@@ -127,7 +127,7 @@ class SubscriptionFormTestCase(TestCase):
         self.assertFormError(response,
                              "form",
                              'source_share_code',
-                             u'Invalid share code.')
+                             'Invalid share code.')
 
     def test_remove_email_address_renders(self):
         """
