@@ -1,9 +1,17 @@
 # Django Holding Page
 
-[![Build Status](https://travis-ci.org/danux/django-holding-page.svg?branch=master)](https://travis-ci.org/danux/django-holding-page)
-
 An out-the-box viral holding page for your websites with export functionality. This project started as a solution to basic
 problem of what to put on new domain names while development was occurring.
+
+[![Build Status](https://travis-ci.org/danux/django-holding-page.svg?branch=master)](https://travis-ci.org/danux/django-holding-page)
+
+Tested on:
+
+- Python 2.7.9
+- Python 3.2
+- Python 3.3
+- Python 3.4
+- Python 3.5
 
 ## Features
 
