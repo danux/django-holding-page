@@ -14,5 +14,5 @@ fi
 
 FILE_NAME="$PACKAGE_NAME-$VERSION.tar.gz"
 
-tar cvzf ${FILE_NAME} --exclude "*.pyc" holding_page/ MANIFEST.in setup.py README.md LICENSE
+python setup.py sdist upload
 echo "Created ${FILE_NAME}"
