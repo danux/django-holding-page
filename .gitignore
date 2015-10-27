@@ -1,7 +1,8 @@
 .idea/
 static/
 media/
-djangpytpython
+*.sqlite3
+django-holding-page-*.tar.gz
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/

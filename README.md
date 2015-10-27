@@ -1,16 +1,22 @@
 # Django Holding Page
 
-An out-the-box viral holding page for your websites with export functionality. This project started as a solution to basic
+A viral holding page to collect email address with export and unsubscribe functionality. This project started as a solution to basic
 problem of what to put on new domain names while development was occurring.
 
-[![Build Status](https://travis-ci.org/danux/django-holding-page.svg?branch=master)](https://travis-ci.org/danux/django-holding-page)
+## Tested versions
 
-Tested on:
+### Python
 
 - Python 2.7.9
 - Python 3.3.5
 - Python 3.4.2
 - Python 3.5.0
+
+### Django
+
+- Django 1.8
+
+[![Build Status](https://travis-ci.org/danux/django-holding-page.svg?branch=master)](https://travis-ci.org/danux/django-holding-page)
 
 ## Features
 
@@ -20,7 +26,54 @@ Tested on:
 
 ## Usage
 
-Usage guidelines will be added once the setup.py stuff is setup.
+Start up a Django project in the usual way and then ensure you have the requirements installed:
+
+    pip install django-widget-tweaks==1.4.1
+
+To run the tests on __Python 2.7__ install mock too:
+
+    pip install mock==1.3.0
+
+Install django-holding-page pip:
+
+    pip install django-holding-page
+
+At the end of settings.py:
+
+    INSTALLED_APPS += (
+        'django.contrib.sites',
+        'widget_tweaks',
+        'holding_page.subscribers',
+    )
+
+At the end of urls.py:
+
+    urlpatterns += patterns(
+        url(r'', include('holding_page.subscribers.urls', namespace='subscriber',)),
+    )
+
+Remember to migrate:
+
+    python manage.py migrate
+
+Finally, don't forget to change Django's default Site at /admin/ so the emails work correctly.
+
+## Templates
+
+The following templates can be overwritten in your templates directory. See https://docs.djangoproject.com/en/1.8/ref/templates/api/#configuring-an-engine
+
+### Web pages
+
+- base.html
+- subscriber/subscribe_form.html
+- subscriber/successful_unsubscribe.html
+- subscriber/thank_you.html
+- subscriber/unsubscribe_form.html
+
+### Emails
+
+- email/welcome_body.txt
+- email/welcome_subject.txt
 
 ## Development
 
@@ -29,9 +82,6 @@ Usage guidelines will be added once the setup.py stuff is setup.
     pip install -r requirements.txt
     ./manage.py test
     ./manage.py migrate
-
-Restyle subscriber/templates/subscriber/*.html
-Reword subscriber/templates/email/welcome_*.txt to suit your project
 
 ## Development Roadmap/Ideas
 
