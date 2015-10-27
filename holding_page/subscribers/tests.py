@@ -58,7 +58,7 @@ class SubscriptionFormTestCase(TestCase):
         response = self.client.post(reverse('subscriber:subscriber_form'),
                                     self.data)
         self.assertFormError(response,
-                             "form", 
+                             "form",
                              'email',
                              u'Subscriber with this Email already exists.')
 
@@ -80,11 +80,11 @@ class SubscriptionFormTestCase(TestCase):
         response = self.client.post(reverse('subscriber:subscriber_form'), data)
         self.assertTrue(response.status_code, 200)
         self.assertFormError(response,
-                             "form", 
+                             "form",
                              'email',
                              u'This field is required.')
         self.assertFormError(response,
-                             "form", 
+                             "form",
                              'full_name',
                              u'This field is required.')
 
@@ -126,13 +126,13 @@ class SubscriptionFormTestCase(TestCase):
                                     self.data)
         self.assertEqual(response.status_code, 200)
         self.assertFormError(response,
-                             "form", 
+                             "form",
                              'source_share_code',
                              u'Invalid share code.')
 
     def test_remove_email_address_renders(self):
         """
-        Tests that the unsubscribe form renders 
+        Tests that the unsubscribe form renders
         """
         response = self.client.get(reverse('subscriber:unsubscribe_form'))
         self.assertEqual(response.status_code, 200)
@@ -140,7 +140,7 @@ class SubscriptionFormTestCase(TestCase):
 
     def test_remove_email_address(self):
         """
-        Tests that posting an email to the unsubscribe remove that user's entry  
+        Tests that posting an email to the unsubscribe remove that user's entry
         """
         data = {'email': 'testdata@example.com'}
         response = self.client.post(reverse('subscriber:unsubscribe_form'), data)
