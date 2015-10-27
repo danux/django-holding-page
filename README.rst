@@ -111,7 +111,7 @@ Development Roadmap/Ideas
 History
 *******
 
-0.0.2
+0.0.3
 ^^^^^
 
 - Updated README to use rst instead of md.
