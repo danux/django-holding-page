@@ -114,8 +114,7 @@ class SubscriptionFormTestCase(TestCase):
         referrer = Subscriber.objects.get(pk=1)
         response = self.client.get(reverse('subscriber:subscriber_form_with_code', args=[referrer.share_code]))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context['form'].initial['source_share_code'],
-                         referrer.share_code)
+        self.assertEqual(response.context['form'].initial['source_share_code'], referrer.share_code)
 
     def test_form_valid_share_code(self):
         """

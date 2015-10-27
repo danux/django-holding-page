@@ -17,8 +17,8 @@ class Subscriber(models.Model):
     """
     full_name = models.CharField(max_length=255)
     email = models.EmailField(unique=True, db_index=True)
-    share_code = models.CharField(max_length=10, null=True, db_index=True)
-    source_share_code = models.CharField(max_length=10, blank=True, null=True)
+    share_code = models.CharField(max_length=36, null=True, db_index=True)
+    source_share_code = models.CharField(max_length=36, blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
