@@ -107,3 +107,16 @@ Development Roadmap/Ideas
 - Will i18n it at some point (though it really wouldn't be hard to do yourself)
 - Anything else you fancy adding/suggesting
 - Pull requests will be reviewed if you choose to share back.
+
+History
+*******
+
+0.0.2
+^^^^^
+
+- Updated README to use rst instead of md.
+
+0.0.1
+^^^^^
+
+- First version.
