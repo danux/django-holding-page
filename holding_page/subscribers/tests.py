@@ -178,4 +178,4 @@ class SubscriptionFormTestCase(TestCase):
         staff_user.save()
         self.client.login(username="staff_user", password="staff_user")
         response = self.client.get(reverse('subscriber:export_csv'))
-        self.assertEqual(response.content, '"Test Data User","testdata@example.com","0"\n')
+        self.assertEqual(response.content, b'"Test Data User","testdata@example.com","0"\n')
