@@ -8,7 +8,6 @@ problem of what to put on new domain names while development was occurring.
 Tested on:
 
 - Python 2.7.9
-- Python 3.2
 - Python 3.3
 - Python 3.4
 - Python 3.5
