@@ -2,8 +2,9 @@
 """
 Forms used to create subscribers and allow them to unsubscribe.
 """
-from django import forms
 from holding_page.subscribers.models import Subscriber
+from django import forms
+from django.utils.translation import ugettext as _
 
 
 class SubscriberForm(forms.ModelForm):
@@ -24,7 +25,7 @@ class SubscriberForm(forms.ModelForm):
         if self.cleaned_data['source_share_code'] != '':
             if not Subscriber.objects.filter(share_code=self.cleaned_data['source_share_code']).exists():
                 del self.cleaned_data['source_share_code']
-                raise forms.ValidationError('Invalid share code.')
+                raise forms.ValidationError(_('Invalid share code.'))
         return self.cleaned_data['source_share_code']
 
 
@@ -32,10 +33,10 @@ class UnsubscribeForm(forms.Form):
     """
     Form used to unsubscribe and subscriber.
     """
-    email = forms.CharField(label='Email address')
+    email = forms.CharField(label=_('Email address'))
 
     def clean_email(self):
         if not Subscriber.objects.filter(email=self.cleaned_data['email']).exists():
             del self.cleaned_data['email']
-            raise forms.ValidationError('Invalid email address.')
+            raise forms.ValidationError(_('Invalid email address.'))
         return self.cleaned_data['email']
