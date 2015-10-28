@@ -7,7 +7,10 @@ from django.contrib.auth.models import User, Permission
 from django.core import mail
 from django.core.urlresolvers import reverse
 from django.test import TestCase
-from mock import patch
+try:
+    from unittest.mock import patch
+except ImportError:
+    from mock import patch
 from holding_page.subscribers.forms import SubscriberForm, UnsubscribeForm
 from holding_page.subscribers.models import Subscriber
 
