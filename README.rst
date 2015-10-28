@@ -111,6 +111,11 @@ Development Roadmap/Ideas
 History
 *******
 
+0.0.4
+^^^^^
+
+- Added i18n support.
+
 0.0.3
 ^^^^^
 

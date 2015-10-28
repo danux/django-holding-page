@@ -1,1 +1,1 @@
-Subscribed to {{ site.name }} updates!
+{% load i18n %}{% trans "Subscribed to" %} {{ site.name }}

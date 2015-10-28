@@ -9,16 +9,17 @@ from django.conf import settings
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.utils.translation import ugettext as _
 
 
 class Subscriber(models.Model):
     """
     A subscriber represents a visitor to the holding page who has subscribed by providing their email address.
     """
-    full_name = models.CharField(max_length=255)
-    email = models.EmailField('Email address', unique=True, db_index=True)
-    share_code = models.CharField(max_length=36, null=True, db_index=True)
-    source_share_code = models.CharField(max_length=36, blank=True, null=True, db_index=True)
+    full_name = models.CharField(_('Full name'), max_length=255)
+    email = models.EmailField(_('Email address'), unique=True, db_index=True)
+    share_code = models.CharField(_('Share code'), max_length=36, null=True, db_index=True)
+    source_share_code = models.CharField(_('Source share code'), max_length=36, blank=True, null=True, db_index=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
@@ -27,7 +28,7 @@ class Subscriber(models.Model):
 
     class Meta(object):
         permissions = (
-            ("export_csv", "Can export CSV data"),)
+            ('export_csv', _('Can export CSV data')),)
 
     @property
     def subscribers_recruited(self):
