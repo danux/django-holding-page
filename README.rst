@@ -10,6 +10,12 @@ problem of what to put on new domain names while development was occurring.
 Tested versions
 ---------------
 
+.. image:: https://travis-ci.org/danux/django-holding-page.svg?branch=master
+    :target: https://travis-ci.org/danux/django-holding-page
+
+.. image:: https://coveralls.io/repos/danux/django-holding-page/badge.svg?branch=master&service=github
+  :target: https://coveralls.io/github/danux/django-holding-page?branch=master
+
 Python
 ~~~~~~
 
@@ -23,8 +29,6 @@ Django
 
 - Django 1.8
 
-.. image:: https://travis-ci.org/danux/django-holding-page.svg?branch=master
-    :target: https://travis-ci.org/danux/django-holding-page
 
 Features
 --------
