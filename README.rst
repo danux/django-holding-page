@@ -5,10 +5,10 @@ A viral holding page to collect email address with export and unsubscribe functi
 problem of what to put on new domain names while development was occurring.
 
 Tested versions
-***************
+---------------
 
 Python
-^^^^^^
+~~~~~~
 
 - Python 2.7.9
 - Python 3.3.5
@@ -16,7 +16,7 @@ Python
 - Python 3.5.0
 
 Django
-^^^^^^
+~~~~~~
 
 - Django 1.8
 
@@ -24,20 +24,20 @@ Django
     :target: https://travis-ci.org/danux/django-holding-page
 
 Features
-********
+--------
 
 - Users can provide their email address and name which is saved in to the database for future exports to systems such as Campaign Monitor.
 - Each user is sent a viral code, which allows them to share your holding page with other people and build up points.
 - Complete use of templates - configure the entire app to your own needs without touching the code
 
 Usage
-*****
+-----
 
 Start up a Django project in the usual way and then ensure you have the requirements installed::
 
     pip install django-widget-tweaks==1.4.1
 
-To run the tests on __Python 2.7__ install mock too::
+To run the tests on **Python 2.7** install mock too::
 
     pip install mock==1.3.0
 
@@ -66,12 +66,12 @@ Remember to migrate::
 Finally, don't forget to change Django's default Site at /admin/ so the emails work correctly.
 
 Templates
-*********
+---------
 
 The following templates can be overwritten in your templates directory. See https://docs.djangoproject.com/en/1.8/ref/templates/api/#configuring-an-engine
 
 Web pages
-^^^^^^^^^
+~~~~~~~~~
 
 - base.html
 - subscriber/subscribe_form.html
@@ -80,13 +80,13 @@ Web pages
 - subscriber/unsubscribe_form.html
 
 Emails
-^^^^^^
+~~~~~~
 
 - email/welcome_body.txt
 - email/welcome_subject.txt
 
 Development
-***********
+-----------
 
 To develop the holding page package itself::
 
@@ -97,7 +97,7 @@ To develop the holding page package itself::
     ./manage.py migrate
 
 Development Roadmap/Ideas
-*************************
+-------------------------
 
 - Add a setup.py and other jazz to get this in to pypi
 - Add support for Travis
@@ -109,19 +109,9 @@ Development Roadmap/Ideas
 - Pull requests will be reviewed if you choose to share back.
 
 History
-*******
-
-0.0.4
-^^^^^
-
-- Added i18n support.
-
-0.0.3
-^^^^^
-
-- Updated README to use rst instead of md.
+-------
 
 0.0.1
-^^^^^
+~~~~~
 
 - First version.
