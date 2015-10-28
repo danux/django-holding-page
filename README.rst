@@ -1,6 +1,9 @@
 Django Holding Page
 ===================
 
+Available on `PyPI
+<https://pypi.python.org/pypi/django-holding-page/>`_.
+
 A viral holding page to collect email address with export and unsubscribe functionality. This project started as a solution to basic
 problem of what to put on new domain names while development was occurring.
 
@@ -99,12 +102,9 @@ To develop the holding page package itself::
 Development Roadmap/Ideas
 -------------------------
 
-- Add a setup.py and other jazz to get this in to pypi
-- Add support for Travis
 - Auto-export to Campaign Monitor, Sales Force, etc
 - "Reserve my username" feature
 - Make it easy to integrate this as a beta holding pen for Django projects (i.e. issue beta invites to your subscribers)
-- Will i18n it at some point (though it really wouldn't be hard to do yourself)
 - Anything else you fancy adding/suggesting
 - Pull requests will be reviewed if you choose to share back.
 
